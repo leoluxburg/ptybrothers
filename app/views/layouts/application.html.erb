@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ptybrothers</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "app/assets/stylesheets/pages/pages.scss" %>
+    <link rel="stylesheet" href="src/css/swipebox.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script type="text/javascript">
+      ;( function( $ ) {
+
+      $( '.swipebox' ).swipebox();
+
+      } )( jQuery );
+    </script>
+  </head>
+
+  <body>
+
+    <div class="navbar-wagon">
+    <a href="/" class="navbar-wagon-brand">
+      <img src="http://placehold.it/350x150"/>
+    </a>
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <a href="/pages/home" class="navbar-wagon-item navbar-wagon-link">Home</a>
+      <a href="/pages/photos" class="navbar-wagon-item navbar-wagon-link">Photos</a>
+      <a href="https://www.youtube.com/user/1331panchito" class="navbar-wagon-item navbar-wagon-link">Videos</a>
+      <a href="/pages/riders" class="navbar-wagon-item navbar-wagon-link">Riders</a>
+      <a href="" class="navbar-wagon-item navbar-wagon-link">Us</a>
+    </div>
+    <div class="navbar-wagon-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="/pages/home">Home</a></li>
+          <li><a href="/pages/photos">Photos</a></li>
+          <li><a href="https://www.youtube.com/user/1331panchito">Videos</a></li>
+          <li><a href="/pages/riders">Riders</a></li>
+          <li><a href="#">Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <%= yield %>
+
+  <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4">
+            <ul class="list-inline">
+              <li><a href=""><i class="fa fa-youtube"></i></a></li>
+              <li><a href=""><i class="fa fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa fa-facebook"></i></a></li>
+              <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-xs-8 text-right">
+            <p>Pty brothers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="lib/jquery-2.0.3.js"></script>
+    <script src="src/js/jquery.swipebox.js"></script>
+  </body>
+</html>
